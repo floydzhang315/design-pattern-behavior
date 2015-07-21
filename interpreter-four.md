@@ -1,6 +1,6 @@
-## 自定义语言的实现——解释器模式（四）
+# 自定义语言的实现——解释器模式（四）
 
-**4 完整解决方案**  
+## 完整解决方案  
 
 为了能够解释机器人控制指令，Sunny 软件公司开发人员使用解释器模式来设计和实现机器人控制程序。针对五条文法规则，分别提供五个类来实现，其中终结符表达式 direction、action 和 distance 对应 DirectionNode 类、ActionNode 类和 DistanceNode 类，非终结符表达式 expression 和 composite 对应 SentenceNode 类和 AndNode 类。  
       

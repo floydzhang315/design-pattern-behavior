@@ -1,14 +1,14 @@
-## 对象间的联动——观察者模式（五）  
+# 对象间的联动——观察者模式（五）  
 
-**5 观察者模式与Java事件处理**  
+## 观察者模式与 Java 事件处理  
 
 JDK 1.0 及更早版本的事件模型基于职责链模式，但是这种模型不适用于复杂的系统，因此在JDK 1.1 及以后的各个版本中，事件处理模型采用基于观察者模式的委派事件模型（DelegationEvent Model, DEM），即一个 Java 组件所引发的事件并不由引发事件的对象自己来负责处理，而是委派给独立的事件处理对象负责。  
 
 在 DEM 模型中，目标角色（如界面组件）负责发布事件，而观察者角色（事件处理者）可以向目标订阅它所感兴趣的事件。当一个具体目标产生一个事件时，它将通知所有订阅者。事件的发布者称为事件源（Event Source），而订阅者称为事件监听器（Event Listener），在这个过程中还可以通过事件对象（Event Object）来传递与事件相关的信息，可以在事件监听者的实现类中实现事件处理，因此事件监听对象又可以称为事件处理对象。**事件源对象、事件监听对象（事件处理对象）和事件对象构成了 Java 事件处理模型的三要素。**事件源对象充当观察目标，而事件监听对象充当观察者。以按钮点击事件为例，其事件处理流程如下：  
 
-(1) 如果用户在 GUI 中单击一个按钮，将触发一个事件（如A ctionEvent 类型的动作事件），JVM 将产生一个相应的 ActionEvent 类型的事件对象，在该事件对象中包含了有关事件和事件源的信息，此时按钮是事件源对象；  
+(1) 如果用户在 GUI 中单击一个按钮，将触发一个事件（如 ActionEvent 类型的动作事件），JVM 将产生一个相应的 ActionEvent 类型的事件对象，在该事件对象中包含了有关事件和事件源的信息，此时按钮是事件源对象；  
 
-(2) 将 ActionEvent 事件对象传递给事件监听对象（事件处理对象），JDK提供了专门用于处理 ActionEvent 事件的接口 ActionListener，开发人员需提供一个 ActionListener 的实现类（如MyActionHandler），实现在 ActionListener 接口中声明的抽象事件处理方法 actionPerformed()，对所发生事件做出相应的处理；  
+(2) 将 ActionEvent 事件对象传递给事件监听对象（事件处理对象），JDK 提供了专门用于处理 ActionEvent 事件的接口 ActionListener，开发人员需提供一个 ActionListener 的实现类（如MyActionHandler），实现在 ActionListener 接口中声明的抽象事件处理方法 actionPerformed()，对所发生事件做出相应的处理；  
 
 (3) 开发人员将 ActionListener 接口的实现类（如 MyActionHandler）对象注册到按钮中，可以通过按钮类的 addActionListener() 方法来实现注册；  
 
