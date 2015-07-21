@@ -1,7 +1,7 @@
 ## 3 完整解决方案  
 为了降低功能键与功能处理类之间的耦合度，让用户可以自定义每一个功能键的功能，Sunny 软件公司开发人员使用命令模式来设计“自定义功能键”模块，其核心结构如图 4 所示：  
 
-![自定义功能键核心结构图][images/1366034181_4378.jpg]  
+![自定义功能键核心结构图](images/1366034181_4378.jpg)  
 
 在图 4 中，FBSettingWindow 是“功能键设置”界面类，FunctionButton 充当请求调用者，Command 充当抽象命令类，MinimizeCommand 和 HelpCommand 充当具体命令类，WindowHanlder 和 HelpHandler 充当请求接收者。完整代码如下所示：  
 

@@ -4,7 +4,7 @@
 
 Sunny 软件公司开发人员使用访问者模式对 OA 系统中员工数据汇总模块进行重构，使得系统可以很方便地增加新类型的访问者，更加符合“单一职责原则”和“开闭原则”，重构后的基本结构如图所示：  
 
-![][images/1333714391_6314.gif]  
+![](images/1333714391_6314.gif)  
 
 在图中，FADepartment 表示财务部，HRDepartment 表示人力资源部，它们充当具体访问者角色，其抽象父类 Department 充当抽象访问者角色；EmployeeList 充当对象结构，用于存储员工列表；FulltimeEmployee 表示正式员工，ParttimeEmployee 表示临时工，它们充当具体元素角色，其父接口 Employee 充当抽象元素角色。完整代码如下所示：
 

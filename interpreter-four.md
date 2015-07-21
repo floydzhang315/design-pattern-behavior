@@ -6,10 +6,10 @@
       
 我们可以通过抽象语法树来表示具体解释过程，例如机器人控制指令“down run 10 and left move 20”对应的抽象语法树如图所示：
       
-![机器人控制程序抽象语法树实例][images/1341331816_4096.jpg]  
+![机器人控制程序抽象语法树实例](images/1341331816_4096.jpg)  
 
 机器人控制程序实例基本结构如图所示：  
-![机器人控制程序结构图][images/1341331826_7970.jpg]  
+![机器人控制程序结构图](images/1341331826_7970.jpg)  
 在图中，AbstractNode 充当抽象表达式角色，DirectionNode、ActionNode 和 DistanceNode 充当终结符表达式角色，AndNode 和 SentenceNode 充当非终结符表达式角色。完整代码如下所示：  
 
 ```

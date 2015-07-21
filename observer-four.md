@@ -4,7 +4,7 @@
 
 观察者模式在 Java 语言中的地位非常重要。在 JDK 的 java.util 包中，提供了 Observable 类以及 Observer 接口，它们构成了 JDK 对观察者模式的支持。如图所示：  
 
-![JDK提供的Observable类及Observer接口结构图][images/1341504430_1842.jpg]   
+![JDK提供的Observable类及Observer接口结构图](images/1341504430_1842.jpg)   
 
 (1) Observer接口  
 
@@ -17,6 +17,6 @@ void  update(Observable o, Object arg);
 
 java.util.Observable类充当观察目标类，在Observable中定义了一个向量Vector来存储观察者对象，它所包含的方法及说明见表：
 
-![Observable类所包含方法及说明][images/212928.jpg]  
+![Observable类所包含方法及说明](images/212928.jpg)  
 
 我们可以直接使用 Observer 接口和 Observable 类来作为观察者模式的抽象层，再自定义具体观察者类和具体观察目标类，通过使用 JDK 中的 Observer 接口和 Observable 类，可以更加方便地在 Java 语言中应用观察者模式。  

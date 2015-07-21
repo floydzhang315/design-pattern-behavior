@@ -4,7 +4,7 @@
 
 为了实现对象之间的联动，Sunny 软件公司开发人员决定使用观察者模式来进行多人联机对战游戏的设计，其基本结构如图所示：
 
-![多人联机对战游戏结构图][images/1341503929_8319.jpg]  
+![多人联机对战游戏结构图](images/1341503929_8319.jpg)  
 
 在图中，AllyControlCenter 充当目标类，ConcreteAllyControlCenter 充当具体目标类，Observer 充当抽象观察者，Player 充当具体观察者。完整代码如下所示：
 

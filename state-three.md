@@ -4,7 +4,7 @@
 
 Sunny 软件公司开发人员使用状态模式来解决账户状态的转换问题，客户端只需要执行简单的存款和取款操作，系统根据余额将自动转换到相应的状态，其基本结构如图所示：
 
-![银行账户结构图][images/1358693610_6618.jpg]  
+![银行账户结构图](images/1358693610_6618.jpg)  
 
 在图中，Account 充当环境类角色，AccountState 充当抽象状态角色，NormalState、OverdraftState 和 RestrictedState 充当具体状态角色。完整代码如下所示：  
  

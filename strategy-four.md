@@ -6,7 +6,7 @@
 
 (1) Java SE的容器布局管理就是策略模式的一个经典应用实例，其基本结构示意图如图所示：  
 
-![][images/1343812299_2772.jpg]  
+![](images/1343812299_2772.jpg)  
 
 在 Java SE 开发中，用户需要对容器对象 Container 中的成员对象如按钮、文本框等 GUI 控件进行布局（Layout），在程序运行期间由客户端动态决定一个 Container 对象如何布局，Java 语言在 JDK 中提供了几种不同的布局方式，封装在不同的类中，如 BorderLayout、FlowLayout、GridLayout、GridBagLayout 和 CardLayout 等。在图中，Container 类充当环境角色Context，而 LayoutManager 作为所有布局类的公共父类扮演了抽象策略角色，它给出所有具体布局类所需的接口，而具体策略类是 LayoutManager 的子类，也就是各种具体的布局类，它们封装了不同的布局方式。  
 
@@ -31,7 +31,7 @@ public class Container extends Component {
 
 在微软公司提供的演示项目 PetShop 4.0 中就使用策略模式来处理同步订单和异步订单的问题。在 PetShop 4.0 的 BLL（Business Logic Layer，业务逻辑层）子项目中有一个 OrderAsynchronous 类和一个 OrderSynchronous 类，它们都继承自 IOrderStrategy 接口，如图所示：  
 
-![][images/1343812646_8454.jpg] 
+![](images/1343812646_8454.jpg) 
 
 在图中，OrderSynchronous 以一种同步的方式处理订单，而 OrderAsynchronous 先将订单存放在一个队列中，然后再对队列里的订单进行处理，以一种异步方式对订单进行处理。BLL 的 Order 类通过反射机制从配置文件中读取策略配置的信息，以决定到底是使用哪种订单处理方式。配置文件 web.config 中代码片段如下所示：
 
@@ -85,6 +85,6 @@ public class Container extends Component {
 **练习**
 Sunny 软件公司欲开发一款飞机模拟系统，该系统主要模拟不同种类飞机的飞行特征与起飞特征，需要模拟的飞机种类及其特征如表所示：
 
-![飞机种类及特征一览表][images/3114.jpg] 
+![飞机种类及特征一览表](images/3114.jpg) 
 
 为将来能够模拟更多种类的飞机，试采用策略模式设计该飞机模拟系统。

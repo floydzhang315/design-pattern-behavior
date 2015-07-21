@@ -4,7 +4,7 @@
 
 为了简化 AbstractObjectList 类的结构，并给不同的具体数据集合类提供不同的遍历方式，Sunny 软件公司开发人员使用迭代器模式来重构 AbstractObjectList 类的设计，重构之后的销售管理系统数据遍历结构如图所示：
 
-![销售管理系统数据遍历结构图][images/20130815232323562.jpg]  
+![销售管理系统数据遍历结构图](images/20130815232323562.jpg)  
 
 在图中，AbstractObjectList 充当抽象聚合类，ProductList 充当具体聚合类，AbstractIterator 充当抽象迭代器，ProductIterator 充当具体迭代器。完整代码如下所示：  
 

@@ -25,7 +25,7 @@ primitive ::= 'printstring'  | 'space' | 'break' //基本命令，其中string�
 ```
 
 根据以上文法规则，通过进一步分析，绘制如图所示结构图：  
-![格式化指令结构图][images/1341332238_7715.jpg]  
+![格式化指令结构图](images/1341332238_7715.jpg)  
 
 在图中，Context 充当环境角色，Node充当抽象表达式角色，ExpressionNode、CommandNode 和 LoopCommandNode 充当非终结符表达式角色，PrimitiveCommandNode 充当终结符表达式角色。完整代码如下所示：  
 
